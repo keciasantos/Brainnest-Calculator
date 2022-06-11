@@ -1,3 +1,145 @@
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  transition: all 0.5s ease;
+} */
+
+:root {
+  --dark-color: #112d4e;
+  --dark-gradient: linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
+  --light-gradient: linear-gradient(
+    109.6deg,
+    rgb(204, 228, 247) 11.2%,
+    rgb(237, 246, 250) 100.2%
+  );
+  --light-color: #f9f7f7;
+  --light-blue: #dbe2ef;
+  --medium-blue: #3f72af;
+}
+
 body {
   font-family: "Raleway", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: var(--medium-blue);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  position: relative;
+  height: auto;
+  width: auto;
+  padding: 25px;
+  border-radius: 21px;
+  box-shadow: 0px 0px 30px 4px rgba(115, 115, 116, 0.2);
+}
+
+.theme-toggler {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* acho que isso é desnecessario */
+.theme-toggler.active {
+  color: #333;
+}
+
+.theme-toggler.active::before {
+  background-color: #fff;
+}
+
+.theme-toggler::before {
+  content: "";
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #333;
+  z-index: -1;
+}
+
+#display {
+  margin: 0 5px;
+  height: 150px;
+  width: auto;
+  max-width: 270px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 30px;
+  margin-bottom: 20px;
+  overflow-x: scroll;
+  border-radius: 5px;
+}
+
+#display::-webkit-scrollbar {
+  display: block;
+  height: 3px;
+}
+
+button {
+  height: 60px;
+  width: 60px;
+  border: 0;
+  border-radius: 5px;
+  margin: 1.5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* Light theme */
+body {
+  background: var(--light-gradient);
+}
+.calculator {
+  background: var(--medium-blue);
+}
+
+.calculator #display {
+  background-color: var(--light-blue);
+  color: var(--dark-color);
+}
+
+.calculator button {
+  background: var(--light-blue);
+  color: var(--dark-color);
+}
+
+/* Dark theme */
+body {
+  background: var(--dark-gradient);
+}
+.calculator.dark {
+  /* background: var(--dark-gradient); */
 }
