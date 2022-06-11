@@ -20,7 +20,7 @@
   );
   --light-color: #f9f7f7;
   --light-blue: #dbe2ef;
-  --medium-blue: #3f72af;
+  --medium-blue: #376296;
 }
 
 body {
@@ -34,7 +34,8 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--medium-blue);
+  color: #fff;
+  /* color: var(--medium-blue); */
 }
 
 .container {
@@ -49,15 +50,15 @@ a {
   position: relative;
   height: auto;
   width: auto;
-  padding: 25px;
-  border-radius: 21px;
-  box-shadow: 0px 0px 30px 4px rgba(115, 115, 116, 0.2);
+  padding: 20px 15px;
+  border-radius: 13px;
+  box-shadow: 0px 0px 30px #61616c;
 }
 
 .theme-toggler {
   position: absolute;
-  top: 10px;
-  right: 30px;
+  top: 20px;
+  right: 33px;
   color: #fff;
   cursor: pointer;
   z-index: 1;
@@ -74,12 +75,12 @@ a {
 
 .theme-toggler::before {
   content: "";
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 50%;
+  border-radius: 20%;
   background-color: #333;
   z-index: -1;
 }
@@ -96,6 +97,7 @@ a {
   margin-bottom: 20px;
   overflow-x: scroll;
   border-radius: 5px;
+  margin-top: 20px;
 }
 
 #display::-webkit-scrollbar {
@@ -127,19 +129,29 @@ body {
 }
 
 .calculator #display {
-  background-color: var(--light-blue);
+  background: var(--light-gradient);
   color: var(--dark-color);
 }
 
 .calculator button {
-  background: var(--light-blue);
+  background: var(--light-gradient);
   color: var(--dark-color);
 }
 
 /* Dark theme */
-body {
+body.dark {
   background: var(--dark-gradient);
 }
 .calculator.dark {
-  /* background: var(--dark-gradient); */
+  background: #bfc2c7;
+}
+
+.calculator.dark #display {
+  background: var(--dark-gradient);
+  color: var(--light-color);
+}
+
+.calculator.dark button {
+  background: var(--dark-gradient);
+  color: var(--light-color);
 }
