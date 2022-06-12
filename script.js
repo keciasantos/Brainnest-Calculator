@@ -70,25 +70,25 @@ function mathOperation() {
       result = "0";
     } else {
       result = parseFloat(result) * parseFloat(dis2Num);
-      result = result.toFixed(5);
+      result = result.toFixed(3);
     }
   } else if (lastOperation === "+") {
     result = parseFloat(result) + parseFloat(dis2Num);
-    result = result.toFixed(5);
+    result = result.toFixed(3);
   } else if (lastOperation === "-") {
     result = parseFloat(result) - parseFloat(dis2Num);
-    result = result.toFixed(5);
+    result = result.toFixed(3);
   } else if (lastOperation === "/") {
     if (parseFloat(dis2Num) == "0") {
       alert("Cannot divide by zero");
       result = "0";
     } else {
       result = parseFloat(result) / parseFloat(dis2Num);
-      result = result.toFixed(5);
+      result = result.toFixed(3);
     }
   } else if (lastOperation === "%") {
     result = parseFloat(result) % parseFloat(dis2Num);
-    result = result.toFixed(5);
+    result = result.toFixed(3);
   }
 }
 
