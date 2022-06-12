@@ -4,118 +4,70 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brainnest-main-pj-wk4</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,300&display=swap"
-      rel="stylesheet"
-    />
     <script
       src="https://kit.fontawesome.com/9855ed748f.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./styles/style.css" />
-    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Title</title>
   </head>
-  <body class="dark">
-    <div class="container">
-      <div class="div calculator dark">
+  <body>
+    <div class="container dark">
+      <div class="calculator">
         <div class="theme-toggler active">
-          <i class="toggler-icon"></i>
-          <!-- <input type="checkbox" class="toggler-icon" /> -->
+          <input class="toggler-icon" type="checkbox" />
         </div>
+
         <div class="display-screen">
-          <div id="display"></div>
+          <div id="display" class="display-1">0</div>
+          <div id="display" class="display-2">0</div>
+          <div id="display" class="temp-result"></div>
         </div>
-        <div class="btn">
+
+        <div class="buttons">
           <table>
             <tr>
-              <td><button class="btn-operator" id="%">%</button></td>
-              <td><button class="btn-operator" id="sqrt">&radic;</button></td>
-              <!-- <td>
-                <button class="btn-operator" id="last-entity-clear">CE</button>
-              </td> -->
-              <td><button class="btn-operator" id="all-clear">C</button></td>
-              <td>
-                <button class="btn-operator" id="backspace">
-                  <i class="fa-solid fa-delete-left"></i>
+              <td><button class="btn-operator">%</button></td>
+
+              <td><button class="btn-clear" id="clear">C</button></td>
+              <td colspan="2">
+                <button class="btn-backspace" id="backspace">
+                  <i class="fa-solid fa-delete-left fa-xl"></i>
                 </button>
               </td>
             </tr>
+            <tr></tr>
             <tr>
-              <td>
-                <button class="btn-operator" id="fraction">
-                  <sup>1</sup>&frasl;<sub>x</sub>
-                </button>
-              </td>
-              <!-- <td>
-                <button class="btn-operator" id="elevated">
-                  x<sup>2</sup>
-                </button>
-              </td> -->
-              <td>
-                <button class="btn-operator" id="(">(</button>
-              </td>
-              <td><button class="btn-operator" id=")">)</button></td>
-              <td>
-                <button class="btn-operator" id="/">&divide;</button>
-              </td>
+              <td><button class="btn-number">7</button></td>
+              <td><button class="btn-number">8</button></td>
+              <td><button class="btn-number">9</button></td>
+              <td><button class="btn-operator">/</button></td>
             </tr>
             <tr>
-              <td>
-                <button class="btn-number" id="7">7</button>
-              </td>
-              <td>
-                <button class="btn-number" id="8">8</button>
-              </td>
-              <td><button class="btn-number" id="9">9</button></td>
-              <td>
-                <button class="btn-operator" id="*">&times;</button>
-              </td>
+              <td><button class="btn-number">4</button></td>
+              <td><button class="btn-number">5</button></td>
+              <td><button class="btn-number">6</button></td>
+              <td><button class="btn-operator">*</button></td>
             </tr>
             <tr>
-              <td>
-                <button class="btn-number" id="4">4</button>
-              </td>
-              <td>
-                <button class="btn-number" id="5">5</button>
-              </td>
-              <td><button class="btn-number" id="6">6</button></td>
-              <td>
-                <button class="btn-operator" id="-">&minus;</button>
-              </td>
+              <td><button class="btn-number">1</button></td>
+              <td><button class="btn-number">2</button></td>
+              <td><button class="btn-number">3</button></td>
+              <td><button class="btn-operator">-</button></td>
             </tr>
             <tr>
+              <td><button class="btn-number">0</button></td>
+              <td><button class="btn-number">.</button></td>
+
               <td>
-                <button class="btn-number" id="1">1</button>
+                <button class="btn-equal" id="equal">=</button>
               </td>
-              <td>
-                <button class="btn-number" id="2">2</button>
-              </td>
-              <td><button class="btn-number" id="3">3</button></td>
-              <td>
-                <button class="btn-operator" id="+">&plus;</button>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn-operador" id="neg-pos">
-                  <sup>+</sup>&frasl;-
-                </button>
-              </td>
-              <td>
-                <button class="btn-number" id="0">0</button>
-              </td>
-              <td><button class="btn-number" id="dot">.</button></td>
-              <td>
-                <button class="btn-operator" id="equal">=</button>
-              </td>
+              <td><button class="btn-operator">+</button></td>
             </tr>
           </table>
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
