@@ -1,9 +1,9 @@
-# Brainnest-main-pj-wk 
+# Brainnest-main-pj-wk4
 # Calculator with Javascript Vanilla
 
 <h2> last week-project from Brainnest Program </h2>
 
-Have a look:
+Have a look: https://keciasantos.github.io/Brainnest-Calculator/
 
 ### Techs used
 
