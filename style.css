@@ -63,30 +63,9 @@ body {
   height: 25px;
   position: absolute;
   top: 50%;
-  /* transform: translate(-50%, -50%); */
   border-radius: 20%;
   z-index: -1;
 }
-
-/* #display {
-  margin: 0 5px;
-  height: 150px;
-  width: auto;
-  max-width: 270px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  font-size: 30px;
-  margin-bottom: 20px;
-  overflow-x: scroll;
-  border-radius: 5px;
-  margin-top: 20px;
-}
-
-#display::-webkit-scrollbar {
-  display: block;
-  height: 3px;
-} */
 
 .display-screen {
   margin: 0 5px;

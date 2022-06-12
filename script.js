@@ -21,6 +21,7 @@ const operation = document.querySelectorAll(".btn-operator");
 const equal = document.querySelector(".btn-equal");
 const clearAll = document.querySelector(".btn-clear");
 const clearLast = document.querySelector(".btn-backspace");
+
 let dis1Num = "";
 let dis2Num = "";
 let result = null;
@@ -69,20 +70,25 @@ function mathOperation() {
       result = "0";
     } else {
       result = parseFloat(result) * parseFloat(dis2Num);
+      result = result.toFixed(5);
     }
   } else if (lastOperation === "+") {
     result = parseFloat(result) + parseFloat(dis2Num);
+    result = result.toFixed(5);
   } else if (lastOperation === "-") {
     result = parseFloat(result) - parseFloat(dis2Num);
+    result = result.toFixed(5);
   } else if (lastOperation === "/") {
     if (parseFloat(dis2Num) == "0") {
       alert("Cannot divide by zero");
       result = "0";
     } else {
       result = parseFloat(result) / parseFloat(dis2Num);
+      result = result.toFixed(5);
     }
   } else if (lastOperation === "%") {
     result = parseFloat(result) % parseFloat(dis2Num);
+    result = result.toFixed(5);
   }
 }
 
