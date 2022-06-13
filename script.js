@@ -37,7 +37,7 @@ numbers.forEach((number) => {
       // if there is a dot -> not add
       return;
     }
-
+    // if there is already a zero at start
     if (e.target.innerText === "0" && dis2Num === "0") return;
 
     // display any number that was clicked
