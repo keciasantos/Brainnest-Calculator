@@ -31,10 +31,13 @@ let haveDot = false;
 numbers.forEach((number) => {
   number.addEventListener("click", (e) => {
     if (e.target.innerText === "." && !haveDot) {
+      // if there is no dot -> can be added
       haveDot = true;
     } else if (e.target.innerText === "." && haveDot) {
+      // if there is a dot -> not add
       return;
     }
+    // display any number that was clicked
     dis2Num += e.target.innerText;
     display2.innerText = dis2Num;
     // console.log();
@@ -44,20 +47,23 @@ numbers.forEach((number) => {
 operation.forEach((operation) => {
   operation.addEventListener("click", (e) => {
     if (!dis2Num) return;
-    haveDot = false;
+    haveDot = false; // if want to add another dot in the next number
     const operationName = e.target.innerText;
+    // if all the elements necessary exists
     if (dis1Num && dis2Num && lastOperation) {
       mathOperation();
     } else {
-      result = parseFloat(dis2Num);
+      result = parseFloat(dis2Num); // transform string to number
     }
     clearVar(operationName);
     lastOperation = operationName;
     //console.log(result);
   });
 });
+
+// function to clear everything
 function clearVar(name = "") {
-  dis1Num += dis2Num + " " + name + " ";
+  dis1Num += dis2Num + " " + name + " "; // moving the value to display1
   display1.innerText = dis1Num;
   display2.innerText = "";
   dis2Num = "";
