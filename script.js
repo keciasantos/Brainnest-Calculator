@@ -89,8 +89,7 @@ function mathOperation() {
     result = result.toFixed(3);
   } else if (lastOperation === "/") {
     if (parseFloat(dis2Num) == "0") {
-      alert("Cannot divide by zero");
-      result = "0";
+      result = "infinity";
     } else {
       result = parseFloat(result) / parseFloat(dis2Num);
       result = result.toFixed(3);
