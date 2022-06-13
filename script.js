@@ -37,6 +37,9 @@ numbers.forEach((number) => {
       // if there is a dot -> not add
       return;
     }
+
+    if (e.target.innerText === "0" && dis2Num === "0") return;
+
     // display any number that was clicked
     dis2Num += e.target.innerText;
     display2.innerText = dis2Num;
@@ -48,7 +51,7 @@ operation.forEach((operation) => {
   operation.addEventListener("click", (e) => {
     if (!dis2Num) return;
     haveDot = false; // if want to add another dot in the next number
-    const operationName = e.target.innerText;
+    const operationName = e.target.innerText; // operation btn
     // if all the elements necessary exists
     if (dis1Num && dis2Num && lastOperation) {
       mathOperation();
